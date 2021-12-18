@@ -50,11 +50,21 @@ const App = () => {
     setTasks(newTasks);
   };
 
+  // Função para deletar as tarefas da lista
+  const handleTaskDeletion = (taskId) => {
+		const newTasks = tasks.filter((task) => task.id !== taskId);
+
+		setTasks(newTasks);
+	};
+
   return (
     <>
       <div className="container">
         <AddTarefa handleTaskAddition={handleTaskAddition}/>
-        <Tarefas tasks={tasks} handleTaskClick={handleTaskClick}/>
+        <Tarefas 
+        tasks={tasks} 
+        handleTaskClick={handleTaskClick}
+        handleTaskDeletion={handleTaskDeletion}/>
       </div>
     </>
   );
