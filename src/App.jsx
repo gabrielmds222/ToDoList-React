@@ -3,6 +3,7 @@ import {v4 as uuidv4} from 'uuid'
 
 import Tarefas from "./components/Tarefas";
 import AddTarefa from "./components/AddTarefa";
+import Header from "./components/Header";
 
 import './App.css';
 
@@ -60,6 +61,7 @@ const App = () => {
   return (
     <>
       <div className="container">
+        <Header/>
         <AddTarefa handleTaskAddition={handleTaskAddition}/>
         <Tarefas 
         tasks={tasks} 
