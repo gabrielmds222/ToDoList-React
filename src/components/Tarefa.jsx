@@ -4,7 +4,7 @@ import "./Tarefa.css";
 
 const Tarefa = ({ task }) => {
     return (
-        <div className="task-container"></div>
+        <div className="task-container">{task.title}</div>
     );
 };
 

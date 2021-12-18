@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+
 import Tarefas from "./components/Tarefas";
+import AddTarefa from "./components/AddTarefa";
+
 import './App.css';
 
 const App = () => {
@@ -25,6 +28,7 @@ const App = () => {
   return (
     <>
       <div className="container">
+        <AddTarefa />
         <Tarefas tasks={tasks}/>
       </div>
     </>
