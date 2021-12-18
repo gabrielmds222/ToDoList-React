@@ -1,8 +1,10 @@
 import React from "react";
 
-const Tarefa = () => {
+import "./Tarefa.css";
+
+const Tarefa = ({ task }) => {
     return (
-        <h1>tarefa</h1>
+        <div className="task-container"></div>
     );
 };
 

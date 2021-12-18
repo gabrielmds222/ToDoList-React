@@ -15,6 +15,11 @@ const App = () => {
       title: "Estudar",
       completed: false,
     },
+    {
+      id: "3",
+      title: "Tomar banho",
+      completed: false,
+    },
   ]);
 
   return (
