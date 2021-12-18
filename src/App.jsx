@@ -26,6 +26,17 @@ const App = () => {
     },
   ]);
 
+  // Essa função vai alterar o valor das tarefas de true para false e vice-versa
+  const handleTaskClick = (taskId) => {
+		const newTasks = tasks.map((task) => {
+			if (task.id === taskId) return { ...task, completed: !task.completed };
+
+			return task;
+		});
+
+		setTasks(newTasks);
+	};
+
   const handleTaskAddition = (taskTitle) => {
     const newTasks = [
       ...tasks,
@@ -43,7 +54,7 @@ const App = () => {
     <>
       <div className="container">
         <AddTarefa handleTaskAddition={handleTaskAddition}/>
-        <Tarefas tasks={tasks}/>
+        <Tarefas tasks={tasks} handleTaskClick={handleTaskClick}/>
       </div>
     </>
   );

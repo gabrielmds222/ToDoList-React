@@ -11,7 +11,8 @@ const AddTarefa = ({handleTaskAddition}) => {
     };
 
     const handleAddTaskClick = () => {
-        handleTaskAddition(inputData)
+        handleTaskAddition(inputData);
+        setInputData('');
     }
 
     return (

@@ -1,10 +1,10 @@
 import React from "react";
 import Tarefa from "./Tarefa"
 
-const Tarefas = ({ tasks }) => {
+const Tarefas = ({ tasks, handleTaskClick }) => {
     return (
         <>
-            {tasks.map((task) => (<Tarefa task={task} />))}
+            {tasks.map((task) => (<Tarefa task={task} handleTaskClick={handleTaskClick}/>))}
         </>
     );
 };
