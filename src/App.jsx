@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import {v4 as uuidv4} from 'uuid'
+import { v4 as uuidv4 } from 'uuid';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Tarefas from "./components/Tarefas";
 import AddTarefa from "./components/AddTarefa";
 import Header from "./components/Header";
+import TaskDetails from "./components/TaskDetails";
 
 import './App.css';
 
@@ -59,16 +61,15 @@ const App = () => {
 	};
 
   return (
-    <>
-      <div className="container">
-        <Header/>
-        <AddTarefa handleTaskAddition={handleTaskAddition}/>
-        <Tarefas 
-        tasks={tasks} 
-        handleTaskClick={handleTaskClick}
-        handleTaskDeletion={handleTaskDeletion}/>
-      </div>
-    </>
+    <div className="container">
+    <Header/>
+    
+          <AddTarefa handleTaskAddition={handleTaskAddition}/>
+          <Tarefas 
+          tasks={tasks} 
+          handleTaskClick={handleTaskClick}
+          handleTaskDeletion={handleTaskDeletion}/>
+    </div>
   );
 };
 

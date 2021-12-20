@@ -1,6 +1,6 @@
 import React from "react";
-import {CgClose, CgInfo} from 'react-icons/cg';
-
+import {CgClose, CgCheckO} from 'react-icons/cg';
+import {FiEdit} from 'react-icons/fi'
 import "./Tarefa.css";
 
 const Tarefa = ({ task, handleTaskClick, handleTaskDeletion }) => {
@@ -10,17 +10,22 @@ const Tarefa = ({ task, handleTaskClick, handleTaskDeletion }) => {
         className="task-container"
         style={task.completed ? {borderLeft: "6px solid yellow"} : {}}
         >
-           <div className="task-title" onClick={() => handleTaskClick(task.id)}>
+           <div className="task-title">
                 {task.title}
            </div>
 
            <div className="buttons-container">
+               
+               <button className="check-task-button"  onClick={() => handleTaskClick(task.id)}> 
+                    <CgCheckO/> 
+               </button>
+
+               <button className="edit-task-button"> 
+                    <FiEdit/> 
+               </button>
+
                <button className="remove-task-button" onClick={() => handleTaskDeletion(task.id)}>
                     <CgClose/> 
-               </button>
-               
-               <button className="see-task-details-button"> 
-                    <CgInfo/> 
                </button>
            </div>
 

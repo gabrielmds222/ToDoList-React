@@ -20,10 +20,11 @@
 } */
 
 .remove-task-button,
-.see-task-details-button {
+.edit-task-button,
+.check-task-button {
   background-color: #444;
   border: none;
   font-size: 18px;
   color: chartreuse;
-  margin: 0 5px;
+  margin: 0 6px;
 }
