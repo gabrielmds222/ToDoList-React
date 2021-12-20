@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import axios from 'axios';
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Tarefas from "./components/Tarefas";
 import AddTarefa from "./components/AddTarefa";
