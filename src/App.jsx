@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -29,6 +29,18 @@ const App = () => {
       completed: false,
     },
   ]);
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+			const { data } = await axios.get(
+				"https://jsonplaceholder.cypress.io/todos?_limit=10"
+			);
+
+      setTasks(data);
+		};
+
+    fetchTasks();
+  }, []);
 
   // Essa função vai alterar o valor das tarefas de true para false e vice-versa
   const handleTaskClick = (taskId) => {
