@@ -3,7 +3,11 @@
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 2px solid #000;
   padding: 30px;
+
+  background: rgba(239, 238, 243, 0.31);
+  border: 1px solid #efeef3;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px #d6d6e1, -5px -5px 10px #ffffff;
   border-radius: 10px;
 }
